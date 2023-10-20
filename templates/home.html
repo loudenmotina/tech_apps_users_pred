@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Adopted users prediction Index Index</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="opted_in_to_mailing_list" placeholder="opted in to mailing list" required="required" /><br>
+    	<input type="text" name="enabled_for_marketing_drip" placeholder="enabled_for_marketing_drip" required="required" /><br>
+        <input type="text" name="year" placeholder="year" required="required" /><br>
+        <input type="text" name="month" placeholder="month" required="required" /><br>
+        <input type="text" name="period_usage" placeholder="period_usage" required="required" /><br>
+        <input type="text" name="GUEST_INVITE" placeholder="GUEST_INVITE" required="required" /><br>
+        <input type="text" name="ORG_INVITE" placeholder="ORG_INVITE" required="required" /><br>
+        <input type="text" name="PERSONAL_PROJECTS" placeholder="PERSONAL_PROJECTS" required="required" /><br>
+        <input type="text" name="SIGNUP" placeholder="SIGNUP" required="required" /><br>
+        <input type="text" name="SIGNUP_GOOGLE_AUTH" placeholder="SIGNUP_GOOGLE_AUTH" required="required" /><br>
+        <input type="text" name="category_of_invited_user" placeholder="category_of_invited_user" required="required" /><br>
+        <input type="text" name="category_of_group_org" placeholder="category_of_group_org" required="required" /><br>
+        
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
