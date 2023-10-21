@@ -1,11 +1,6 @@
-FROM circleci/python:3.8
-
-WORKDIR /app
-
-COPY requirements.txt /app
-RUN pip3 install -r requirements.txt
-
-COPY . /app
-
-ENTRYPOINT ["python3"]
-CMD ["flask_app.py"]
+FROM python:3.9-slim
+COPY . /usr/app/
+EXPOSE 8000
+WORKDIR /usr/app/
+RUN pip install -r requirements.txt
+CMD python flask_app.py
