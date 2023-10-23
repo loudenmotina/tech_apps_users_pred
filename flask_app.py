@@ -5,7 +5,7 @@ import pickle
 from pickle import dump, load
 app = Flask(__name__)
 
-# Load your trained RandomForest model
+# Load your trained RandomFo
 # You should replace 'your_model.pkl' with the actual filename of your trained model
 model = joblib.load(open("model.pkl", "rb"))  # Load your trained model here
 
