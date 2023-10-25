@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  louden-springboot-container:
+    image: louden-spring-boot-docker-compose:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/louden-springboot-container
+    ports:
+      - "7000-8100:7000"
