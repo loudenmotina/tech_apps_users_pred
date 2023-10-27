@@ -6,7 +6,7 @@ from pickle import dump, load
 app = Flask(__name__)
 
 # Load your trained RandomFo
-# You should replace 'your_model.pkl' with the actual filename of your trained model
+# You should replace 'your_model.pkl' with the actual filename of your trained modelkkklll
 model = joblib.load(open("model.pkl", "rb"))  # Load your trained model here
 
 @app.route('/')
